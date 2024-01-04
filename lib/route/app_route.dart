@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:worker_bridge/view/screens/onboard/onboard_screen.dart';
+import 'package:worker_bridge/view/screens/sign_in/sign_in_screen.dart';
 import 'package:worker_bridge/view/screens/splash/splash_screen.dart';
 
 class AppRoute{
@@ -18,5 +19,7 @@ class AppRoute{
 
     GetPage(name: splashScreen, page: () => const SplashScreen()),
     GetPage(name: onboardScreen, page: () => const OnboardScreen()),
+
+    GetPage(name: signInScreen, page: () => const SignInScreen()),
   ];
 }
