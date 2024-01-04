@@ -89,7 +89,7 @@ class SignInFormSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                           borderSide: const BorderSide(color: AppColors.primaryColor, width: 1)
                       ),
-                      prefixIcon: const Icon(Icons.phone, size: 24)
+                      prefixIcon: const Icon(Icons.phone, size: 24, color: AppColors.colorGrey)
                   ),
                 ),
               )
@@ -128,7 +128,7 @@ class SignInFormSection extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                     borderSide: const BorderSide(color: AppColors.primaryColor, width: 1)
                 ),
-                suffixIcon: const Icon(Icons.visibility_off, size: 24)
+                suffixIcon: const Icon(Icons.visibility_off, size: 24, color: AppColors.colorGrey)
             ),
           ),
           const Gap(12),
@@ -163,6 +163,7 @@ class SignInFormSection extends StatelessWidget {
               ),
               TextButton(
                 onPressed: (){},
+                style: TextButton.styleFrom(elevation: 0, backgroundColor: Colors.transparent),
                 child: Text(
                   "Forget Password?",
                   style: GoogleFonts.nunito(
@@ -178,7 +179,7 @@ class SignInFormSection extends StatelessWidget {
           const Gap(24),
 
           MaterialButton(
-            onPressed: (){},
+            onPressed: () => signInController.gotoHomeScreen(),
             elevation: 0,
             height: 56, minWidth: MediaQuery.of(context).size.width,
             color: AppColors.primaryColor,

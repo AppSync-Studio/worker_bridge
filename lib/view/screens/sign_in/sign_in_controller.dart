@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:worker_bridge/route/app_route.dart';
 
 class SignInController extends GetxController{
 
@@ -14,5 +15,17 @@ class SignInController extends GetxController{
   void rememberMe(bool val){
     isRememberMe = val;
     update();
+  }
+
+  gotoHomeScreen(){
+    Get.offAndToNamed(AppRoute.homeScreen);
+  }
+
+  gotoForgetPasswordScreen(){
+    Get.toNamed(AppRoute.phoneVerifyScreen);
+  }
+
+  gotoSignUpScreen(){
+    Get.toNamed(AppRoute.signUpScreen);
   }
 }

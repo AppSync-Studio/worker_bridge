@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
+import 'package:worker_bridge/view/screens/sign_in/inner_widget/sign_in_bottom_nav.dart';
 import 'package:worker_bridge/view/screens/sign_in/inner_widget/sign_in_form_section.dart';
 import 'package:worker_bridge/view/screens/sign_in/inner_widget/sign_in_top_section.dart';
 import 'package:worker_bridge/view/screens/sign_in/sign_in_controller.dart';
@@ -28,11 +29,11 @@ class _SignInScreenState extends State<SignInScreen> {
     return SafeArea(
       top: false,
       bottom: false,
-      child: Scaffold(
-        backgroundColor: AppColors.scaffoldBackgroundColor,
-        body: GetBuilder<SignInController>(
-          builder: (controller) {
-            return SingleChildScrollView(
+      child: GetBuilder<SignInController>(
+        builder: (controller) {
+          return Scaffold(
+            backgroundColor: AppColors.scaffoldBackgroundColor,
+            body: SingleChildScrollView(
               padding: const EdgeInsetsDirectional.only(top: 76, start: 24, bottom: 20, end: 24),
               physics: const BouncingScrollPhysics(),
               child: Column(
@@ -46,9 +47,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   SignInFormSection(signInController: controller)
                 ],
               ),
-            );
-          }
-        ),
+            ),
+            bottomNavigationBar: SignInBottomNav(signInController: controller),
+          );
+        }
       ),
     );
   }
