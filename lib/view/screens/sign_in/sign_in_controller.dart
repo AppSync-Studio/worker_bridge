@@ -22,10 +22,10 @@ class SignInController extends GetxController{
   }
 
   gotoForgetPasswordScreen(){
-    Get.toNamed(AppRoute.phoneVerifyScreen);
+    Get.offAndToNamed(AppRoute.phoneVerifyScreen);
   }
 
   gotoSignUpScreen(){
-    Get.toNamed(AppRoute.signUpScreen);
+    Get.offAndToNamed(AppRoute.signUpScreen);
   }
 }
