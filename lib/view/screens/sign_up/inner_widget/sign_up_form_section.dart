@@ -274,7 +274,7 @@ class SignUpFormSection extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                     borderSide: const BorderSide(color: AppColors.primaryColor, width: 1)
                 ),
-                prefixIcon: const Icon(Icons.male, size: 24, color: AppColors.colorGrey)
+                prefixIcon: const Icon(Icons.place, size: 24, color: AppColors.colorGrey)
             ),
           ),
           const Gap(12),
