@@ -58,7 +58,37 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   const Gap(32),
 
                   // form section
-                  SignUpFormSection(signUpController: controller)
+                  SignUpFormSection(signUpController: controller),
+                  const Gap(32),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Already have an account?",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.nunito(
+                          color: AppColors.colorBlack,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400
+                        ),
+                      ),
+                      const Gap(8),
+                      GestureDetector(
+                        onTap: () => Get.offAndToNamed(AppRoute.signInScreen),
+                        child: Text(
+                          "Sign In",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.nunito(
+                            color: AppColors.primaryColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
