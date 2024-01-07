@@ -39,6 +39,7 @@ dependencies:
   gap:
   google_fonts:
   smooth_page_indicator:
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:

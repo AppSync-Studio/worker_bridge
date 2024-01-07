@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:worker_bridge/utils/app_utils/app_image/app_image.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/home_top_section.dart';
@@ -35,7 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
             body: Column(
               children: [
                 // top section
-                HomeTopSection(homeController: controller)
+                HomeTopSection(homeController: controller),
+                const Gap(16),
               ],
             ),
           );

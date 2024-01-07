@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/utils/app_utils/app_image/app_image.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
@@ -67,7 +69,7 @@ class HomeTopSection extends StatelessWidget {
                   )
                 ],
               ),
-              IconButton(onPressed: (){}, icon: const Icon(Icons.notifications_none, color: AppColors.colorGrey), iconSize: 24)
+              IconButton(onPressed: (){}, icon: SvgPicture.asset(AppIcons.notificationIcon), iconSize: 24)
             ],
           ),
           const Gap(16),
@@ -83,14 +85,14 @@ class HomeTopSection extends StatelessWidget {
               ),
               alignment: Alignment.center,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const Icon(CupertinoIcons.search, size: 24, color: AppColors.colorGrey),
+                  const Gap(12),
                   Text(
-                    "Search by Category",
+                    "Search...",
                     style: GoogleFonts.nunito(color: AppColors.colorGrey, fontSize: 14, fontWeight: FontWeight.w400),
                   ),
-                  const Icon(CupertinoIcons.search, size: 24, color: AppColors.colorGrey)
                 ],
               ),
             ),
