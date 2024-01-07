@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:worker_bridge/utils/app_utils/app_image/app_image.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
+import 'package:worker_bridge/view/screens/home/home_controller.dart';
+import 'package:worker_bridge/view/screens/home/inner_widget/home_top_section.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -13,16 +18,28 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   @override
+  void initState() {
+    Get.put(HomeController());
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
 
     return SafeArea(
       top: false, bottom: false,
-      child: Scaffold(
-        backgroundColor: AppColors.scaffoldBackgroundColor,
-        body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsetsDirectional.symmetric(vertical: 20, horizontal: 24),
-        ),
+      child: GetBuilder<HomeController>(
+        builder: (controller) {
+          return Scaffold(
+            backgroundColor: AppColors.scaffoldBackgroundColor,
+            body: Column(
+              children: [
+                // top section
+                HomeTopSection(homeController: controller)
+              ],
+            ),
+          );
+        }
       ),
     );
   }
