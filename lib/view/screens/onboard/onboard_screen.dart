@@ -18,7 +18,6 @@ class _OnboardScreenState extends State<OnboardScreen> {
 
   @override
   void initState() {
-
     Get.put(OnboardController());
     super.initState();
   }

@@ -1,9 +1,9 @@
 class HomeModel{
 
   List<ServiceBanner>? serviceBanner;
-  List<Category>? category;
+  List<Categories>? categories;
 
-  HomeModel({this.serviceBanner, this.category});
+  HomeModel({this.serviceBanner, this.categories});
 }
 
 class ServiceBanner{
@@ -12,10 +12,10 @@ class ServiceBanner{
   ServiceBanner({this.imageSrc});
 }
 
-class Category{
+class Categories{
 
   String? imageSrc;
   String? title;
 
-  Category({this.imageSrc, this.title});
+  Categories({this.imageSrc, this.title});
 }
