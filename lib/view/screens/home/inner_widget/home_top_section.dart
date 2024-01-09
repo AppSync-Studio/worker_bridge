@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/utils/app_utils/app_image/app_image.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
-import 'package:worker_bridge/utils/app_utils/extensions/gap_extension.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
 
 class HomeTopSection extends StatelessWidget {

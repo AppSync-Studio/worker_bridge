@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:worker_bridge/view/screens/bottom_nav/bottom_nav_screens.dart';
-import 'package:worker_bridge/view/screens/home/home_screen.dart';
 import 'package:worker_bridge/view/screens/onboard/onboard_screen.dart';
 import 'package:worker_bridge/view/screens/sign_in/sign_in_screen.dart';
 import 'package:worker_bridge/view/screens/sign_up/sign_up_screen.dart';
