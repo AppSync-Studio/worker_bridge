@@ -107,6 +107,6 @@ class SignUpController extends GetxController{
   }
 
   void gotoHomeScreen(){
-    Get.offAndToNamed(AppRoute.homeScreen);
+    Get.offAndToNamed(AppRoute.bottomNavScreen);
   }
 }

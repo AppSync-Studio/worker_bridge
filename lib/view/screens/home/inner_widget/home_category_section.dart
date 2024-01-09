@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/utils/app_utils/extensions/gap_extension.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
-import 'package:worker_bridge/view/screens/home/home_model.dart';
 
 class HomeCategorySection extends StatelessWidget {
 

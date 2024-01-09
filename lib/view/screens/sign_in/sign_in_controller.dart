@@ -18,7 +18,7 @@ class SignInController extends GetxController{
   }
 
   gotoHomeScreen(){
-    Get.offAndToNamed(AppRoute.homeScreen);
+    Get.offAndToNamed(AppRoute.bottomNavScreen);
   }
 
   gotoForgetPasswordScreen(){
