@@ -5,6 +5,7 @@ import 'package:worker_bridge/view/screens/home/home_controller.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/home_banner_section.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/home_category_section.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/home_top_section.dart';
+import 'package:worker_bridge/view/screens/home/inner_widget/house_cleaning_section.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -23,12 +24,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  void dispose() {
-
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
 
     return GetBuilder<HomeController>(
@@ -36,18 +31,23 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           // top section
           HomeTopSection(homeController: controller),
-          SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            padding: const EdgeInsetsDirectional.only(bottom: 20, top: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // banner section
-                HomeBannerSection(homeController: controller),
-                const Gap(16),
-                // category section
-                HomeCategorySection(homeController: controller)
-              ],
+          Expanded(
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsetsDirectional.only(bottom: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // banner section
+                  HomeBannerSection(homeController: controller),
+                  const Gap(16),
+                  // category section
+                  HomeCategorySection(homeController: controller),
+                  const Gap(16),
+                  // house cleaning section
+                  HouseCleaningSection(homeController: controller)
+                ],
+              ),
             ),
           )
         ],

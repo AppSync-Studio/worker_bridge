@@ -12,4 +12,12 @@ class AppImage{
   static const String thirdBannerImage = "assets/images/third_banner.png";
 
   static const String profileAvatarImage = "assets/images/avatar.png";
+
+  // home cleaning service images
+  static const String fullHomeDeepCleanImage = "assets/images/house_cleaning/home_deep_cleaning.jpg";
+  static const String bathroomCleaningImage = "assets/images/house_cleaning/bathroom_cleaning.jpg";
+  static const String floorCleaningImage = "assets/images/house_cleaning/floor_cleaning.jpg";
+  static const String kitchenCleaningImage = "assets/images/house_cleaning/kitchen_cleaning.jpg";
+  static const String thaiGlassCleaningImage = "assets/images/house_cleaning/thai_glass_cleaning.jpg";
+  static const String windowCleaningImage = "assets/images/house_cleaning/window_cleaning.jpg";
 }

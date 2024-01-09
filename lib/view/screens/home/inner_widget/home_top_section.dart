@@ -17,7 +17,7 @@ class HomeTopSection extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Padding(
-      padding: const EdgeInsetsDirectional.only(start: 24, end: 24, top: 56),
+      padding: const EdgeInsetsDirectional.only(start: 24, end: 24, top: 56, bottom: 20),
       child: Column(
         children: [
           Row(

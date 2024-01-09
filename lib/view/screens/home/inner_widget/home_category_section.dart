@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/utils/app_utils/extensions/gap_extension.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
+import 'package:worker_bridge/view/widgets/home/section_title_widget.dart';
 
 class HomeCategorySection extends StatelessWidget {
 
@@ -15,26 +16,7 @@ class HomeCategorySection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsetsDirectional.symmetric(horizontal: 24),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Category",
-                style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 16, fontWeight: FontWeight.w600)
-              ),
-              TextButton(
-                onPressed: (){},
-                child: Text(
-                  "View All",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.nunito(color: AppColors.primaryColor, fontSize: 12, fontWeight: FontWeight.w400),
-                )
-              )
-            ],
-          ),
-        ),
+        SectionTitleWidget(sectionTitle: "Category", onTap: (){}),
         12.00.sectionToContentGap,
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -46,7 +28,7 @@ class HomeCategorySection extends StatelessWidget {
               padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 12),
               margin: EdgeInsetsDirectional.only(end: index == homeController.categoryList.last ? 0 : 12),
               alignment: Alignment.center,
-              decoration: BoxDecoration(color: AppColors.colorWhite, borderRadius: BorderRadius.circular(12), border: Border.all(color: AppColors.colorBlack)),
+              decoration: BoxDecoration(color: AppColors.colorWhite, borderRadius: BorderRadius.circular(12), border: Border.all(color: AppColors.colorGrey)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
