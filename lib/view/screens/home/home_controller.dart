@@ -100,6 +100,33 @@ class HomeController extends GetxController{
     )
   ];
 
+  List<CarService> carServiceList = [
+    CarService(
+        imageSrc: AppImage.carBreakNoiseRepairImage,
+        serviceTitle: "Car Break Noise Repair",
+        serviceRating: 4.6,
+        servicePrice: 20.00
+    ),
+    CarService(
+        imageSrc: AppImage.carCheckUpImage,
+        serviceTitle: "Car Checkup",
+        serviceRating: 4.0,
+        servicePrice: 50.00
+    ),
+    CarService(
+        imageSrc: AppImage.carEngineOilAndFilterChangeImage,
+        serviceTitle: "Car Engine Oil & Filter Change",
+        serviceRating: 4.4,
+        servicePrice: 60.00
+    ),
+    CarService(
+        imageSrc: AppImage.carPolishImage,
+        serviceTitle: "Car Polish",
+        serviceRating: 5.0,
+        servicePrice: 22.50
+    )
+  ];
+
   void setCurrentIndex(int index) {
     currentIndex = index;
     update();

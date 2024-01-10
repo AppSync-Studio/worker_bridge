@@ -33,4 +33,17 @@ class AppImage{
   static const String acLeakRepairImage = "assets/images/ac_repair/ac_leak_repair.jpg";
   static const String acMasterServiceImage = "assets/images/ac_repair/ac_master_service.jpg";
   static const String acCommercialServiceImage = "assets/images/ac_repair/ac_commercial_service.jpg";
+
+  // car service
+  static const String carBreakNoiseRepairImage = "assets/images/car_service/car_break_noise_repair.jpg";
+  static const String carBreakPadRepairImage = "assets/images/car_service/car_break_pad_repair.png";
+  static const String carCheckUpImage = "assets/images/car_service/car_checkup.png";
+  static const String carEngineOilAndFilterChangeImage = "assets/images/car_service/car_engine_oil_and_filter_change.png";
+  static const String carEngineRepairImage = "assets/images/car_service/car_engine_repair.png";
+  static const String carExteriorWashImage = "assets/images/car_service/car_exterior_wash.jpg";
+  static const String carInteriorWashImage = "assets/images/car_service/car_interior_clean.jpg";
+  static const String carLpgConversionImage = "assets/images/car_service/car_lpg_conversion.png";
+  static const String carPaintImage = "assets/images/car_service/car_paint.png";
+  static const String carPolishImage = "assets/images/car_service/car_polish.jpg";
+  static const String roadSideEmergencyCarServiceImage = "assets/images/car_service/roadside_emergency_car_service.png";
 }

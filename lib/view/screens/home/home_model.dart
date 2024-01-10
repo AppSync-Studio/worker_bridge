@@ -40,3 +40,13 @@ class AcRepair{
 
   AcRepair({required this.imageSrc, required this.serviceTitle, required this.serviceRating, required this.servicePrice});
 }
+
+class CarService{
+
+  String imageSrc;
+  String serviceTitle;
+  double serviceRating;
+  double servicePrice;
+
+  CarService({required this.imageSrc, required this.serviceTitle, required this.serviceRating, required this.servicePrice});
+}

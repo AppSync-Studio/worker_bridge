@@ -71,6 +71,7 @@ flutter:
     - assets/images/
     - assets/images/house_cleaning/
     - assets/images/ac_repair/
+    - assets/images/car_service/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
