@@ -20,4 +20,17 @@ class AppImage{
   static const String kitchenCleaningImage = "assets/images/house_cleaning/kitchen_cleaning.jpg";
   static const String thaiGlassCleaningImage = "assets/images/house_cleaning/thai_glass_cleaning.jpg";
   static const String windowCleaningImage = "assets/images/house_cleaning/window_cleaning.jpg";
+
+  // ac repair
+  static const String acBasicServiceImage = "assets/images/ac_repair/ac_basic_service.jpg";
+  static const String acCapacitorReplaceImage = "assets/images/ac_repair/ac_capacitor_replace.jpeg";
+  static const String acCircuitRepairImage = "assets/images/ac_repair/ac_circuit_repair.jpg";
+  static const String acCompressorFittingImage = "assets/images/ac_repair/ac_compressor_fitting.jpg";
+  static const String acGasChargeImage = "assets/images/ac_repair/ac_gas_charge.jpg";
+  static const String acHydroWashImage = "assets/images/ac_repair/ac_hydro_wash.jpeg";
+  static const String acInstallationImage = "assets/images/ac_repair/ac_installation.jpg";
+  static const String acJetWashImage = "assets/images/ac_repair/ac_jet_wash.jpg";
+  static const String acLeakRepairImage = "assets/images/ac_repair/ac_leak_repair.jpg";
+  static const String acMasterServiceImage = "assets/images/ac_repair/ac_master_service.jpg";
+  static const String acCommercialServiceImage = "assets/images/ac_repair/ac_commercial_service.jpg";
 }

@@ -73,6 +73,33 @@ class HomeController extends GetxController{
     )
   ];
 
+  List<AcRepair> acRepairList = [
+    AcRepair(
+        imageSrc: AppImage.acBasicServiceImage,
+        serviceTitle: "AC Basic Service",
+        serviceRating: 4.3,
+        servicePrice: 30.50
+    ),
+    AcRepair(
+        imageSrc: AppImage.acCapacitorReplaceImage,
+        serviceTitle: "AC Capacitor Replacement",
+        serviceRating: 4.7,
+        servicePrice: 40.00
+    ),
+    AcRepair(
+        imageSrc: AppImage.acGasChargeImage,
+        serviceTitle: "AC Gas Charge",
+        serviceRating: 4.1,
+        servicePrice: 25.00
+    ),
+    AcRepair(
+        imageSrc: AppImage.acInstallationImage,
+        serviceTitle: "AC Installation & Uninstallation",
+        serviceRating: 4.8,
+        servicePrice: 35.50
+    )
+  ];
+
   void setCurrentIndex(int index) {
     currentIndex = index;
     update();

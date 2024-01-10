@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
+import 'package:worker_bridge/view/screens/home/inner_widget/ac_repair_section.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/home_banner_section.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/home_category_section.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/home_top_section.dart';
@@ -45,7 +46,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   HomeCategorySection(homeController: controller),
                   const Gap(16),
                   // house cleaning section
-                  HouseCleaningSection(homeController: controller)
+                  HouseCleaningSection(homeController: controller),
+                  const Gap(16),
+                  // ac repair and maintenance
+                  AcRepairSection(homeController: controller),
+                  const Gap(16),
                 ],
               ),
             ),
