@@ -46,6 +46,33 @@ class HomeController extends GetxController{
     ),
   ];
 
+  List<HouseCleaning> houseCleaningList = [
+    HouseCleaning(
+      imageSrc: AppImage.fullHomeDeepCleanImage,
+      serviceTitle: "Full Home Deep Cleaning",
+      serviceRating: 4.5,
+      servicePrice: 120.00
+    ),
+    HouseCleaning(
+      imageSrc: AppImage.kitchenCleaningImage,
+      serviceTitle: "Kitchen Deep Cleaning",
+      serviceRating: 4.9,
+      servicePrice: 35.00
+    ),
+    HouseCleaning(
+      imageSrc: AppImage.bathroomCleaningImage,
+      serviceTitle: "Bathroom Deep Cleaning",
+      serviceRating: 5.0,
+      servicePrice: 50.00
+    ),
+    HouseCleaning(
+      imageSrc: AppImage.floorCleaningImage,
+      serviceTitle: "Floor Deep Cleaning",
+      serviceRating: 4.2,
+      servicePrice: 25.50
+    )
+  ];
+
   void setCurrentIndex(int index) {
     currentIndex = index;
     update();

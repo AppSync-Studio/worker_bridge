@@ -19,3 +19,13 @@ class Categories{
 
   Categories({this.imageSrc, this.title});
 }
+
+class HouseCleaning{
+
+  String imageSrc;
+  String serviceTitle;
+  double serviceRating;
+  double servicePrice;
+
+  HouseCleaning({required this.imageSrc, required this.serviceTitle, required this.serviceRating, required this.servicePrice});
+}
