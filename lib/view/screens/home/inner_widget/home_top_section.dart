@@ -17,7 +17,7 @@ class HomeTopSection extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Padding(
-      padding: const EdgeInsetsDirectional.only(start: 24, end: 24, top: 56, bottom: 20),
+      padding: const EdgeInsetsDirectional.only(start: 24, end: 24, top: 36, bottom: 20),
       child: Column(
         children: [
           Row(
@@ -26,7 +26,7 @@ class HomeTopSection extends StatelessWidget {
               Row(
                 children: [
                   GestureDetector(
-                    onTap: (){},
+                    onTap: () {},
                     child: Container(
                       height: 56,
                       width: 56,

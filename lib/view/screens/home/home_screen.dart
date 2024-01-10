@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:worker_bridge/route/app_route.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
 import 'package:worker_bridge/view/screens/home/inner_widget/ac_repair_section.dart';
@@ -71,11 +72,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                              "Go to ",
-                              style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 14, fontWeight: FontWeight.w400)
+                            "Go to ",
+                            style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 14, fontWeight: FontWeight.w400)
                           ),
                           GestureDetector(
-                            onTap: (){},
+                            onTap: () => Get.toNamed(AppRoute.categoryScreen),
                             child: Text(
                               "Categories",
                               style: GoogleFonts.nunito(color: AppColors.primaryColor, fontSize: 16, fontWeight: FontWeight.w700)

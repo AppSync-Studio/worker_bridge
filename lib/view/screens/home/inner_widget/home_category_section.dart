@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:worker_bridge/route/app_route.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/utils/app_utils/extensions/gap_extension.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
+import 'package:worker_bridge/view/widgets/cards/category_card_widget.dart';
 import 'package:worker_bridge/view/widgets/home/section_title_widget.dart';
 
 class HomeCategorySection extends StatelessWidget {
@@ -16,38 +19,22 @@ class HomeCategorySection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SectionTitleWidget(sectionTitle: "Category", onTap: (){}),
+        SectionTitleWidget(
+            sectionTitle: "Category",
+            onTap: () => Get.toNamed(AppRoute.categoryScreen)
+        ),
         12.00.sectionToContentGap,
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
           padding: const EdgeInsetsDirectional.symmetric(horizontal: 24),
           child: Row(
-            children: List.generate(homeController.categoryList.length, (index) => Container(
-              height: 85, width: 100,
-              padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 12),
-              margin: EdgeInsetsDirectional.only(end: index == homeController.categoryList.last ? 0 : 12),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(color: AppColors.colorWhite, borderRadius: BorderRadius.circular(12), border: Border.all(color: AppColors.colorGrey)),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    homeController.categoryList[index].imageSrc.toString(),
-                    height: 32, width: 32,
-                  ),
-                  8.00.contentToContentGap,
-                  Expanded(
-                    child: Text(
-                      homeController.categoryList[index].title.toString(),
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 12, fontWeight: FontWeight.w600),
-                      maxLines: 1, overflow: TextOverflow.ellipsis,
-                    ),
-                  )
-                ],
-              ),
+            children: List.generate(homeController.categoryList.length, (index) => CategoryCardWidget(
+              onPressed: (){},
+              cardHeight: 85, cardWidth: 100,
+              rightSpacing: index == homeController.categoryList.last ? 0 : 12,
+              iconSrc: homeController.categoryList[index].imageSrc.toString(),
+              categoryName: homeController.categoryList[index].title.toString()
             )),
           ),
         )

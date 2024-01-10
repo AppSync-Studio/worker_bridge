@@ -80,7 +80,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
                 // skip button
                 Positioned(
                   right: 24,
-                  top: 56,
+                  top: 36,
                   child: TextButton(
                     onPressed: () => controller.gotoNextScreen(),
                     child: Text(
