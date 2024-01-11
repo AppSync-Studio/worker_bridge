@@ -13,7 +13,7 @@ class NoDataFoundWidget extends StatelessWidget {
   const NoDataFoundWidget({
     required this.animSrc,
     this.animSize = 150,
-    this.errorTitle = "No Data Found",
+    this.errorTitle = "No Data Available",
     super.key
   });
 
@@ -26,13 +26,13 @@ class NoDataFoundWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Lottie.asset(AppAnimation.noDataAnim, height: 150, width: 150),
+          Lottie.asset(AppAnimation.noDataAnim, height: animSize, width: animSize),
           Text(
-            "No Data Found",
+            errorTitle,
             style: GoogleFonts.nunito(
-                color: AppColors.colorBlack,
-                fontWeight: FontWeight.w600,
-                fontSize: 14
+              color: AppColors.colorBlack,
+              fontWeight: FontWeight.w600,
+              fontSize: 14
             ),
           )
         ],

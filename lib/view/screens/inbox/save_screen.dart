@@ -4,14 +4,15 @@ import 'package:worker_bridge/utils/app_utils/app_animation/app_animation.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/widgets/error_widgets/no_data_found_widget.dart';
 
-class SaveScreen extends StatefulWidget {
-  const SaveScreen({super.key});
+class InboxScreen extends StatefulWidget {
+  const InboxScreen({super.key});
 
   @override
-  State<SaveScreen> createState() => _SaveScreenState();
+  State<InboxScreen> createState() => _InboxScreenState();
 }
 
-class _SaveScreenState extends State<SaveScreen> {
+class _InboxScreenState extends State<InboxScreen> {
+
   @override
   Widget build(BuildContext context) {
 
@@ -27,7 +28,7 @@ class _SaveScreenState extends State<SaveScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Saved", style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 18, fontWeight: FontWeight.w500)),
+              Text("Inbox", style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 18, fontWeight: FontWeight.w500)),
             ],
           ),
         ),

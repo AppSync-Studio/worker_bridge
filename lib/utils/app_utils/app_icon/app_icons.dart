@@ -14,6 +14,7 @@ class AppIcons{
   static const String washingIcon = "assets/icons/washing_machine.png";
 
   static const String homeIcon = "assets/icons/home.png";
+  static const String inboxIcon = "assets/icons/inbox.png";
   static const String bookingIcon = "assets/icons/booking.png";
   static const String savedIcon = "assets/icons/save.png";
   static const String menuIcon = "assets/icons/menu.png";

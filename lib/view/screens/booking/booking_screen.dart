@@ -30,6 +30,7 @@ class _BookingScreenState extends State<BookingScreen> {
       builder: (controller) {
         return Column(
           children: [
+            /// appbar
             Container(
               width: MediaQuery.of(context).size.width,
               padding: const EdgeInsetsDirectional.symmetric(horizontal: 24, vertical: 12),
@@ -72,7 +73,7 @@ class _BookingScreenState extends State<BookingScreen> {
                 ],
               ),
             ),
-
+            /// body
             Expanded(
               child: PageView(
                 controller: controller.pageController,
@@ -149,49 +150,6 @@ class _BookingScreenState extends State<BookingScreen> {
                 }),
               ),
             )
-
-            /*controller.selectedStatus == 0 ? Expanded(
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                padding: const EdgeInsetsDirectional.only(start: 24, end: 24, bottom: 8),
-                child: Column(
-                  children: List.generate(20, (index) => Container(
-                    padding: const EdgeInsetsDirectional.all(12),
-                    margin: const EdgeInsetsDirectional.only(bottom: 12),
-                    height: 56,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: AppColors.colorWhite,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: AppColors.colorGrey, width: 1)
-                    ),
-                  )),
-                ),
-              ),
-            ) : controller.selectedStatus == 1 ? SingleChildScrollView(
-              
-            ) : controller.selectedStatus == 2 ? SingleChildScrollView(
-              
-            ) : Expanded(
-              child: Align(
-                alignment: Alignment.center,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Lottie.asset(AppAnimation.noDataAnim, height: 150, width: 150),
-                    Text(
-                      "No Data Found",
-                      style: GoogleFonts.nunito(
-                        color: AppColors.colorBlack,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ) */
           ],
         );
       }
