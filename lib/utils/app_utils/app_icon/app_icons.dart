@@ -26,7 +26,7 @@ class AppIcons{
   static const String bookingServicesIcon = "assets/icons/menu/booking_services.png";
   static const String changePasswordIcon = "assets/icons/menu/change_password.png";
   static const String getDiscountIcon = "assets/icons/menu/get_discount.png";
-  static const String languageIcon = "assets/icons/menu/about_us.png";
+  static const String languageIcon = "assets/icons/menu/language.png";
   static const String myAddressIcon = "assets/icons/menu/my_address.png";
   static const String myCardsIcon = "assets/icons/menu/my_cards.png";
   static const String myProfileIcon = "assets/icons/menu/my_profile.png";

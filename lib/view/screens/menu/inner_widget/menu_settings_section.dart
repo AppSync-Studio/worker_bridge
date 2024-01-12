@@ -71,6 +71,7 @@ class MenuSettingsSection extends StatelessWidget {
                   ),
                 ),
               ),
+
               // become a provider
               GestureDetector(
                 onTap: (){},
@@ -107,6 +108,7 @@ class MenuSettingsSection extends StatelessWidget {
                   ),
                 ),
               ),
+
               // sign out
               GestureDetector(
                 onTap: (){},
