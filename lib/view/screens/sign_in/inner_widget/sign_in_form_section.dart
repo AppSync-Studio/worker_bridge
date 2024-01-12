@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
+import 'package:worker_bridge/view/screens/sign_in/inner_widget/sign_in_bottom_sheet_section.dart';
 import 'package:worker_bridge/view/screens/sign_in/sign_in_controller.dart';
+import 'package:worker_bridge/view/widgets/bottom_sheet/custom_bottom_sheet.dart';
 
 class SignInFormSection extends StatelessWidget {
 
@@ -22,6 +24,7 @@ class SignInFormSection extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: TextFormField(
+                  readOnly: true,
                   cursorColor: AppColors.colorBlack,
                   controller: signInController.codeController,
                   keyboardType: TextInputType.phone,
@@ -53,6 +56,7 @@ class SignInFormSection extends StatelessWidget {
                           borderSide: const BorderSide(color: AppColors.primaryColor, width: 1)
                       )
                   ),
+                  onTap: () => CustomBottomSheet(isDialCode: true, child: SignInBottomSheetSection(signInController: signInController)).customBottomSheet(context)
                 ),
               ),
               const Gap(8),
