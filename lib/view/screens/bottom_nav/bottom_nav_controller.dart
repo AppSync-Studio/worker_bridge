@@ -4,7 +4,7 @@ import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/view/screens/booking/booking_screen.dart';
 import 'package:worker_bridge/view/screens/bottom_nav/bottom_nav_model.dart';
 import 'package:worker_bridge/view/screens/home/home_screen.dart';
-import 'package:worker_bridge/view/screens/inbox/save_screen.dart';
+import 'package:worker_bridge/view/screens/inbox/inbox_screen.dart';
 import 'package:worker_bridge/view/screens/menu/menu_screen.dart';
 import 'package:worker_bridge/view/screens/save/save_screen.dart';
 
