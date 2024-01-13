@@ -49,7 +49,7 @@ class _BookingScreenState extends State<BookingScreen> {
                         child: Container(
                           width: MediaQuery.of(context).size.width,
                           alignment: Alignment.center,
-                          padding: const EdgeInsetsDirectional.all(8),
+                          padding: const EdgeInsetsDirectional.symmetric(vertical: 8, horizontal: 8),
                           decoration: BoxDecoration(
                             border: Border(
                               bottom: BorderSide(
@@ -58,12 +58,14 @@ class _BookingScreenState extends State<BookingScreen> {
                               )
                             )
                           ),
-                          child: Text(
-                            controller.statusList[index],
-                            style: GoogleFonts.nunito(
-                              color: index == controller.selectedStatus ? AppColors.primaryColor : AppColors.colorBlack,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500
+                          child: FittedBox(
+                            child: Text(
+                              controller.statusList[index],
+                              style: GoogleFonts.nunito(
+                                color: index == controller.selectedStatus ? AppColors.primaryColor : AppColors.colorBlack,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500
+                              ),
                             ),
                           ),
                         ),
