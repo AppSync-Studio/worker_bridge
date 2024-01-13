@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:worker_bridge/route/app_route.dart';
 import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 
@@ -37,7 +39,7 @@ class MenuAccountSection extends StatelessWidget {
             children: [
               // my profile
               GestureDetector(
-                onTap: (){},
+                onTap: () => Get.toNamed(AppRoute.profileScreen),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 16),

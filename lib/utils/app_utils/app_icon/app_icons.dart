@@ -42,4 +42,7 @@ class AppIcons{
   static const String termsIcon = "assets/icons/menu/terms_and_conditions.png";
   static const String faqIcon = "assets/icons/menu/faq.png";
   static const String becomeProviderIcon = "assets/icons/menu/become_provider.png";
+
+
+  static const String editProfileIcon = "assets/icons/edit_profile.png";
 }
