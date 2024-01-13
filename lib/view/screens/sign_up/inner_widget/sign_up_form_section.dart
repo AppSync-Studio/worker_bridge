@@ -5,6 +5,7 @@ import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/screens/sign_up/inner_widget/sign_up_bottom_sheet_section.dart';
 import 'package:worker_bridge/view/screens/sign_up/sign_up_controller.dart';
 import 'package:worker_bridge/view/widgets/bottom_sheet/custom_bottom_sheet.dart';
+import 'package:worker_bridge/view/widgets/buttons/custom_button_widget.dart';
 
 class SignUpFormSection extends StatelessWidget {
 
@@ -357,23 +358,9 @@ class SignUpFormSection extends StatelessWidget {
           ),
 
           const Gap(24),
-          MaterialButton(
+          CustomButtonWidget(
             onPressed: () => signUpController.gotoHomeScreen(),
-            elevation: 0,
-            height: 56, minWidth: MediaQuery.of(context).size.width,
-            color: AppColors.primaryColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Text(
-              "Sign Up",
-              textAlign: TextAlign.center,
-              style: GoogleFonts.nunito(
-                  color: AppColors.colorWhite,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600
-              ),
-            ),
+            buttonTitle: "Sign Up"
           )
         ],
       ),
