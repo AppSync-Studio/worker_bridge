@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
-import 'package:worker_bridge/utils/app_utils/app_image/app_image.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/screens/profile/inner_widget/profile_content_widget.dart';
 import 'package:worker_bridge/view/screens/profile/inner_widget/profile_controller.dart';
