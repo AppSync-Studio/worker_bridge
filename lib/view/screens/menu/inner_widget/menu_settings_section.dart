@@ -3,10 +3,14 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
+import 'package:worker_bridge/view/screens/menu/menu_controller.dart';
+import 'package:worker_bridge/view/widgets/bottom_sheet/custom_bottom_sheet.dart';
 
 class MenuSettingsSection extends StatelessWidget {
-
-  const MenuSettingsSection({super.key});
+  
+  final AppMenuController appMenuController;
+  
+  const MenuSettingsSection({required this.appMenuController, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +41,56 @@ class MenuSettingsSection extends StatelessWidget {
             children: [
               // Language
               GestureDetector(
-                onTap: (){},
+                onTap: () => CustomBottomSheet(
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                          height: 5, width: 75,
+                          decoration: BoxDecoration(color: AppColors.colorGrey.withOpacity(0.3), borderRadius: BorderRadius.circular(12)),
+                        ),
+                      ),
+                      const Gap(16),
+                      Row(
+                        children: [
+                          Text("Select Language", style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 16, fontWeight: FontWeight.w600))
+                        ],
+                      ),
+                      const Gap(16),
+                      SingleChildScrollView(
+                        physics: const BouncingScrollPhysics(),
+                        child: Column(
+                          children: List.generate(appMenuController.languageList.length, (index) => GestureDetector(
+                            onTap: () => appMenuController.changeLanguage(index),
+                            child: Container(
+                              width: MediaQuery.of(context).size.width,
+                              margin: const EdgeInsetsDirectional.only(bottom: 12),
+                              padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 12),
+                              decoration: BoxDecoration(
+                                color: index == appMenuController.selectedLanguage ? AppColors.primaryColor : AppColors.colorWhite,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: index == appMenuController.selectedLanguage ? AppColors.primaryColor : AppColors.colorGrey.withOpacity(0.5),
+                                  width: 0.5
+                                )
+                              ),
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                appMenuController.languageList[index].name,
+                                style: GoogleFonts.nunito(
+                                  color: index == appMenuController.selectedLanguage ? AppColors.colorWhite : AppColors.colorBlack,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14
+                                ),
+                              ),
+                            ),
+                          ))
+                        ),
+                      )
+                    ],
+                  )
+                ).customBottomSheet(context),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 16),
