@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:worker_bridge/route/app_route.dart';
 import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/utils/app_utils/app_image/app_image.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
@@ -28,8 +30,8 @@ class HomeTopSection extends StatelessWidget {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      height: 56,
-                      width: 56,
+                      height: 48,
+                      width: 48,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
@@ -69,7 +71,7 @@ class HomeTopSection extends StatelessWidget {
                   )
                 ],
               ),
-              IconButton(onPressed: (){}, icon: SvgPicture.asset(AppIcons.notificationIcon), iconSize: 24)
+              IconButton(onPressed: () => Get.toNamed(AppRoute.notificationScreen), icon: SvgPicture.asset(AppIcons.notificationIcon), iconSize: 24)
             ],
           ),
           const Gap(16),

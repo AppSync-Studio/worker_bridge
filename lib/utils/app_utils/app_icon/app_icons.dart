@@ -21,6 +21,8 @@ class AppIcons{
   static const String savedIcon = "assets/icons/save.png";
   static const String menuIcon = "assets/icons/menu.png";
 
+  static const String notificationMessageIcon = "assets/icons/notification_message.png";
+
   // menu screen icons
   static const String aboutUsIcon = "assets/icons/menu/about_us.png";
   static const String bookingServicesIcon = "assets/icons/menu/booking_services.png";

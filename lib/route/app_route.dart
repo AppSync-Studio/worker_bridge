@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:worker_bridge/view/screens/bottom_nav/bottom_nav_screens.dart';
 import 'package:worker_bridge/view/screens/category/category_screen.dart';
+import 'package:worker_bridge/view/screens/notification/notification_screen.dart';
 import 'package:worker_bridge/view/screens/onboard/onboard_screen.dart';
 import 'package:worker_bridge/view/screens/sign_in/sign_in_screen.dart';
 import 'package:worker_bridge/view/screens/sign_up/sign_up_screen.dart';
@@ -19,6 +20,9 @@ class AppRoute{
   static const String resetPasswordScreen = "/reset_password_screen";
 
   static const String bottomNavScreen = "/bottom_nav_screen";
+
+  static const String notificationScreen = "/notification_screen";
+
   static const String categoryScreen = "/category_screen";
 
   static List<GetPage> routes = [
@@ -30,6 +34,9 @@ class AppRoute{
     GetPage(name: signUpScreen, page: () => const SignUpScreen()),
 
     GetPage(name: bottomNavScreen, page: () => const BottomNavScreens()),
+
+    GetPage(name: notificationScreen, page: () => const NotificationScreen()),
+
     GetPage(name: categoryScreen, page: () => const CategoryScreen()),
   ];
 }
