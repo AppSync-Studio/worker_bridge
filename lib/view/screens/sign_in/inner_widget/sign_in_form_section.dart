@@ -6,6 +6,7 @@ import 'package:worker_bridge/view/screens/sign_in/inner_widget/sign_in_bottom_s
 import 'package:worker_bridge/view/screens/sign_in/sign_in_controller.dart';
 import 'package:worker_bridge/view/widgets/bottom_sheet/custom_bottom_sheet.dart';
 import 'package:worker_bridge/view/widgets/buttons/custom_button_widget.dart';
+import 'package:worker_bridge/view/widgets/text_field/custom_text_form_field.dart';
 
 class SignInFormSection extends StatelessWidget {
 
@@ -24,117 +25,33 @@ class SignInFormSection extends StatelessWidget {
             children: [
               Expanded(
                 flex: 1,
-                child: TextFormField(
+                child: CustomTextFormField(
                   readOnly: true,
-                  cursorColor: AppColors.colorBlack,
-                  controller: signInController.codeController,
-                  keyboardType: TextInputType.phone,
-                  textInputAction: TextInputAction.next,
-                  style: GoogleFonts.nunito(
-                      color: AppColors.colorBlack,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14
-                  ),
-                  decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.transparent,
-                      labelText: "Code",
-                      labelStyle: GoogleFonts.nunito(
-                          color: AppColors.colorBlack,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600
-                      ),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppColors.colorGrey, width: 1)
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppColors.colorGrey, width: 1)
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppColors.primaryColor, width: 1)
-                      )
-                  ),
-                  onTap: () => CustomBottomSheet(isDialCode: true, child: SignInBottomSheetSection(signInController: signInController)).customBottomSheet(context)
-                ),
+                  labelText: "Code",
+                  textEditingController: signInController.codeController,
+                  onTap: () => CustomBottomSheet(isDialCode: true, child: SignInBottomSheetSection(signInController: signInController)).customBottomSheet(context),
+                )
               ),
               const Gap(8),
               Expanded(
                 flex: 3,
-                child: TextFormField(
-                  cursorColor: AppColors.colorBlack,
-                  controller: signInController.phoneNumberController,
-                  keyboardType: TextInputType.number,
+                child: CustomTextFormField(
+                  textInputType: TextInputType.number,
                   textInputAction: TextInputAction.next,
-                  style: GoogleFonts.nunito(
-                      color: AppColors.colorBlack,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14
-                  ),
-                  decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.transparent,
-                      labelText: "Phone Number",
-                      labelStyle: GoogleFonts.nunito(
-                          color: AppColors.colorBlack,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600
-                      ),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppColors.colorGrey, width: 1)
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppColors.colorGrey, width: 1)
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: const BorderSide(color: AppColors.primaryColor, width: 1)
-                      ),
-                      prefixIcon: const Icon(Icons.phone, size: 24, color: AppColors.colorGrey)
-                  ),
+                  textEditingController: signInController.phoneNumberController,
+                  labelText: "Phone Number",
+                  prefixIcon: const Icon(Icons.phone, size: 24, color: AppColors.colorGrey)
                 ),
               )
             ],
           ),
           const Gap(12),
-          TextFormField(
-            obscureText: true,
-            cursorColor: AppColors.colorBlack,
-            controller: signInController.passwordController,
-            keyboardType: TextInputType.visiblePassword,
+          CustomTextFormField(
+            isPassword: true,
+            textEditingController: signInController.passwordController,
+            textInputType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.done,
-            style: GoogleFonts.nunito(
-                color: AppColors.colorBlack,
-                fontWeight: FontWeight.w400,
-                fontSize: 14
-            ),
-            decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.transparent,
-                labelText: "Password",
-                labelStyle: GoogleFonts.nunito(
-                    color: AppColors.colorBlack,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600
-                ),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: AppColors.colorGrey, width: 1)
-                ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: AppColors.colorGrey, width: 1)
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: const BorderSide(color: AppColors.primaryColor, width: 1)
-                ),
-                suffixIcon: const Icon(Icons.visibility_off, size: 24, color: AppColors.colorGrey)
-            ),
+            labelText: "Password"
           ),
           const Gap(12),
           Row(

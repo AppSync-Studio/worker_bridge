@@ -11,7 +11,7 @@ class CustomTextFormField extends StatefulWidget {
   final String labelText;
   final Widget? prefixIcon;
   final Function()? onTap;
-  final FormFieldValidator formValidator;
+  final FormFieldValidator? formValidator;
   final bool readOnly;
   final bool isPassword;
 
@@ -24,7 +24,7 @@ class CustomTextFormField extends StatefulWidget {
     this.prefixIcon,
     this.onTap,
     this.isPassword = false,
-    required this.formValidator,
+    this.formValidator,
     this.readOnly = false,
     super.key
   });
