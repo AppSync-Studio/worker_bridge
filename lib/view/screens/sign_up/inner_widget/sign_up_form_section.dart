@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/screens/sign_up/inner_widget/sign_up_bottom_sheet_section.dart';
 import 'package:worker_bridge/view/screens/sign_up/sign_up_controller.dart';
