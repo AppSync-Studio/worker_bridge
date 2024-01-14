@@ -6,7 +6,7 @@ import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/utils/app_utils/extensions/gap_extension.dart';
 import 'package:worker_bridge/view/screens/home/home_controller.dart';
 import 'package:worker_bridge/view/widgets/cards/category_card_widget.dart';
-import 'package:worker_bridge/view/widgets/home/section_title_widget.dart';
+import 'package:worker_bridge/view/widgets/text/section_title_widget.dart';
 
 class HomeCategorySection extends StatelessWidget {
 
