@@ -147,7 +147,7 @@ class MenuAccountSection extends StatelessWidget {
               ),
               // change password
               GestureDetector(
-                onTap: (){},
+                onTap: () => Get.toNamed(AppRoute.changePasswordScreen),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsetsDirectional.only(start: 12, top: 16, end: 12),
