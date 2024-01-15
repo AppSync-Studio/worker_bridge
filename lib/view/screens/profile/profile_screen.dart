@@ -94,7 +94,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         // date of birth
                         ProfileContentWidget(
                           iconData: Icons.person,
-                          contentTitle: "Username",
+                          contentTitle: "Date of Birth",
                           content: "2000-11-17",
                         ),
                         CustomDivider(),

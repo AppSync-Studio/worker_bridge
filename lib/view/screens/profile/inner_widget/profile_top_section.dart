@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:worker_bridge/route/app_route.dart';
 import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/utils/app_utils/app_image/app_image.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
@@ -28,17 +30,14 @@ class ProfileTopSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  height: 48,
-                  width: 48,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: AppColors.primaryColor, width: 2),
-                    image: const DecorationImage(image: AssetImage(AppImage.profileAvatarImage), fit: BoxFit.fill)
-                  ),
+              Container(
+                height: 48,
+                width: 48,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: AppColors.primaryColor, width: 2),
+                  image: const DecorationImage(image: AssetImage(AppImage.profileAvatarImage), fit: BoxFit.fill)
                 ),
               ),
               const Gap(8),
@@ -67,7 +66,7 @@ class ProfileTopSection extends StatelessWidget {
             ],
           ),
           IconButton(
-            onPressed: (){},
+            onPressed: () => Get.toNamed(AppRoute.editProfileScreen),
             alignment: Alignment.center,
             icon: Image.asset(AppIcons.editProfileIcon, height: 18, width: 18),
             iconSize: 18

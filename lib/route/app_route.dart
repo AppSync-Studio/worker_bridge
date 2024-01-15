@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:worker_bridge/view/screens/bottom_nav/bottom_nav_screens.dart';
 import 'package:worker_bridge/view/screens/category/category_screen.dart';
+import 'package:worker_bridge/view/screens/edit_profile/edit_profile_screen.dart';
 import 'package:worker_bridge/view/screens/notification/notification_screen.dart';
 import 'package:worker_bridge/view/screens/onboard/onboard_screen.dart';
 import 'package:worker_bridge/view/screens/profile/profile_screen.dart';
@@ -28,6 +29,7 @@ class AppRoute{
 
   // TODO -> menu
   static const String profileScreen = "/profile_screen";
+  static const String editProfileScreen = "/edit_profile_screen";
 
   static List<GetPage> routes = [
 
@@ -45,5 +47,6 @@ class AppRoute{
 
     // menu
     GetPage(name: profileScreen, page: () => const ProfileScreen()),
+    GetPage(name: editProfileScreen, page: () => const EditProfileScreen()),
   ];
 }

@@ -43,6 +43,9 @@ dependencies:
   carousel_slider:
   dots_indicator:
   lottie:
+  image_picker:
+  permission_handler:
+  fluttertoast:
 
 dev_dependencies:
   flutter_test:

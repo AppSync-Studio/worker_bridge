@@ -43,6 +43,9 @@ class AppIcons{
   static const String faqIcon = "assets/icons/menu/faq.png";
   static const String becomeProviderIcon = "assets/icons/menu/become_provider.png";
 
-
+  // edit profile screen
   static const String editProfileIcon = "assets/icons/edit_profile.png";
+  static const String imageUploadIcon = "assets/icons/image_upload.png";
+  static const String cameraIcon = "assets/icons/camera.png";
+  static const String imageGalleryIcon = "assets/icons/image_gallery.png";
 }
