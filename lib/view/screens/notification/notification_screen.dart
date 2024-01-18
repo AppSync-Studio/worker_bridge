@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:worker_bridge/utils/app_utils/app_icon/app_icons.dart';
 import 'package:worker_bridge/utils/app_utils/color/app_colors.dart';
 import 'package:worker_bridge/view/screens/notification/notification_controller.dart';
+import 'package:worker_bridge/view/widgets/cards/custom_card_widget.dart';
 
 class NotificationScreen extends StatefulWidget {
 
@@ -49,15 +50,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               padding: const EdgeInsetsDirectional.only(start: 24, end: 24, top: 20, bottom: 8),
               physics: const BouncingScrollPhysics(),
               child: Column(
-                children: List.generate(controller.notificationList.length, (index) => Container(
-                  width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsetsDirectional.all(12),
-                  margin: const EdgeInsetsDirectional.only(bottom: 12),
-                  decoration: BoxDecoration(
-                    color: AppColors.colorWhite,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: AppColors.colorBlack.withOpacity(0.2), width: 1)
-                  ),
+                children: List.generate(controller.notificationList.length, (index) => CustomCardWidget(
                   child: Row(
                     children: [
                       Container(

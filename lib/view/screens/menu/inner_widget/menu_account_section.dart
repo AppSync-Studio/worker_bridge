@@ -37,6 +37,7 @@ class MenuAccountSection extends StatelessWidget {
           ),
           Column(
             children: [
+
               // my profile
               GestureDetector(
                 onTap: () => Get.toNamed(AppRoute.profileScreen),
@@ -73,9 +74,10 @@ class MenuAccountSection extends StatelessWidget {
                   ),
                 ),
               ),
-              // my cards
+
+              // my payment methods
               GestureDetector(
-                onTap: (){},
+                onTap: () => Get.toNamed(AppRoute.paymentMethodsScreen),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 16),
@@ -95,7 +97,7 @@ class MenuAccountSection extends StatelessWidget {
                           ),
                           const Gap(8),
                           Text(
-                            "My Cards",
+                            "My Payment Methods",
                             style: GoogleFonts.nunito(
                                 color: AppColors.colorBlack,
                                 fontSize: 14,
@@ -109,6 +111,7 @@ class MenuAccountSection extends StatelessWidget {
                   ),
                 ),
               ),
+
               // My addresses
               GestureDetector(
                 onTap: (){},
@@ -145,6 +148,7 @@ class MenuAccountSection extends StatelessWidget {
                   ),
                 ),
               ),
+
               // change password
               GestureDetector(
                 onTap: () => Get.toNamed(AppRoute.changePasswordScreen),

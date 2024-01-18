@@ -5,6 +5,7 @@ import 'package:worker_bridge/view/screens/change_password/change_password_scree
 import 'package:worker_bridge/view/screens/edit_profile/edit_profile_screen.dart';
 import 'package:worker_bridge/view/screens/notification/notification_screen.dart';
 import 'package:worker_bridge/view/screens/onboard/onboard_screen.dart';
+import 'package:worker_bridge/view/screens/payment_methods/payment_methods_screen.dart';
 import 'package:worker_bridge/view/screens/profile/profile_screen.dart';
 import 'package:worker_bridge/view/screens/sign_in/sign_in_screen.dart';
 import 'package:worker_bridge/view/screens/sign_up/sign_up_screen.dart';
@@ -31,6 +32,7 @@ class AppRoute{
   // TODO -> menu
   static const String profileScreen = "/profile_screen";
   static const String editProfileScreen = "/edit_profile_screen";
+  static const String paymentMethodsScreen = "/payment_methods_screen";
   static const String changePasswordScreen = "/change_password_screen";
 
   static List<GetPage> routes = [
@@ -50,6 +52,7 @@ class AppRoute{
     // menu
     GetPage(name: profileScreen, page: () => const ProfileScreen()),
     GetPage(name: editProfileScreen, page: () => const EditProfileScreen()),
+    GetPage(name: paymentMethodsScreen, page: () => const PaymentMethodsScreen()),
     GetPage(name: changePasswordScreen, page: () => const ChangePasswordScreen()),
   ];
 }

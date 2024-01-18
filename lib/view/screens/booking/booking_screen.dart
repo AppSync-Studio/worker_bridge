@@ -42,6 +42,8 @@ class _BookingScreenState extends State<BookingScreen> {
                 children: [
                   Text("Bookings", style: GoogleFonts.nunito(color: AppColors.colorBlack, fontSize: 18, fontWeight: FontWeight.w500)),
                   const Gap(16),
+
+                  // tab_bar
                   Row(
                     children: List.generate(controller.statusList.length, (index) => Flexible(
                       child: InkWell(
@@ -75,6 +77,7 @@ class _BookingScreenState extends State<BookingScreen> {
                 ],
               ),
             ),
+
             /// body
             Expanded(
               child: PageView(
